@@ -59,7 +59,7 @@ nav a img{
     display: block;
 }
 section{
-    height: 90vh;
+    height: 90dvh;
     scroll-snap-align: end;
     padding: 0 30px;
 }
@@ -119,14 +119,14 @@ section{
 .title{
     font-weight: bold;
     color: white;
-    font-size: 60px;
-    margin: 40px;
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    margin: min(40px, 5%);
 }
 .skills-title{
     font-weight: bold;
     color: #0e2e51;
-    font-size: 60px;
-    margin: 40px;
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    margin: min(40px, 5%);
 }
 .skills-content .list{
   display: flex;
@@ -171,9 +171,9 @@ section{
 }
 .about-descreption{
     color: white;
-    font-size: 35px;
-    margin: 40px;
-    margin-left: 50px;
+    font-size: clamp(1.3rem, calc(1vw + 1rem), 2.2rem);
+    margin: min(40px, 5%);
+    margin-left: min(50px, 6%);
 }
 #about{
   background: linear-gradient(#0e2e51 80%, #ffeabc 99%);
