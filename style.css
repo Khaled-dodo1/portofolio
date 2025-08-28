@@ -7,6 +7,7 @@
 }
 html{
     scroll-snap-type: y proximity;
+    scroll-padding-top: 68px;
     scroll-behavior: smooth;
 }
 body p{
@@ -59,9 +60,9 @@ nav a img{
     display: block;
 }
 section{
-    height: 90dvh;
-    scroll-snap-align: end;
-    padding: 0 30px;
+    min-height: 90dvh;
+    scroll-snap-align: start;
+    padding: 0 30px 30px;
 }
 #home{
     background: radial-gradient(
@@ -119,13 +120,13 @@ section{
 .title{
     font-weight: bold;
     color: white;
-    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 4rem);
     margin: min(40px, 5%);
 }
 .skills-title{
     font-weight: bold;
     color: #0e2e51;
-    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 4rem);
     margin: min(40px, 5%);
 }
 .skills-content .list{
@@ -191,6 +192,13 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 50px;
+}
+.websites a{
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+  box-shadow: 1px 1px 60px #ffffff3b;
 }
 .websites img{
     border-radius: 50px;
