@@ -6,9 +6,11 @@
   font-family: 'Myriad', sans-serif;
 }
 html{
-    scroll-snap-type: y proximity;
     scroll-padding-top: 68px;
     scroll-behavior: smooth;
+}
+body{
+  display: grid;
 }
 body p{
     font-family: 'Myriad Pro', sans-serif;
@@ -61,7 +63,6 @@ nav a img{
 }
 section{
     min-height: 90dvh;
-    scroll-snap-align: start;
     padding: 0 30px 30px;
 }
 #home{
@@ -114,6 +115,9 @@ section{
     display: flex;
     justify-self: flex-end;
 }
+.mobile-name{
+  display: none;
+}
 .content{
     overflow: hidden;
 }
@@ -129,18 +133,10 @@ section{
     font-size: clamp(1.8rem, calc(7vw + 1rem), 4rem);
     margin: min(40px, 5%);
 }
-.skills-content .list{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 100px 20px;
-}
-.skills-content .list li{
+.skills-content p{
   color: #0e2e51;
   font-size: 40px;
   font-weight: bold;
-}
-.second-li{
-  margin-left: -400px;
 }
 .skills-container{
   display: grid;
@@ -190,7 +186,7 @@ section{
 }
 .websites{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
     gap: 50px;
 }
 .websites a{
@@ -206,11 +202,12 @@ section{
     box-shadow: 1px 1px 100px #ffffff;
     height: 100%;
     width: 100%;
+    aspect-ratio: 2/1;
 }
 .websites img:hover{
     scale: 1.05;
 }
-.container{
+.container-input{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +220,7 @@ section{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   background-color: #0e2e51af;
 }
-.container form .user-details {
+.container-input form .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -290,13 +287,16 @@ form .user-details .input-field {
   font-weight: 800;
   letter-spacing: 4px;
 }
+.type1{
+  z-index: 1;
+}
 .type1::after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   transition: all 0.5s ease-in-out;
-  background-color: #ff0000;
+  background-color: #0e2e51;
   border-radius: 30px;
   visibility: hidden;
   height: 10px;
@@ -331,7 +331,7 @@ form .user-details .input-field {
   }
 }
 @media(max-width: 584px) {
-  .container {
+  .container-input {
     max-width: 100%;
   }
   form .user-details .input-field {
@@ -349,6 +349,12 @@ form .user-details .input-field {
 @media screen and (max-width: 825px) {
   #projects{
     height: 150vh;
+  }
+  .mobile-name{
+    display: inline;
+  }
+  .job{
+    display: none;
   }
 }
 @keyframes textright{
